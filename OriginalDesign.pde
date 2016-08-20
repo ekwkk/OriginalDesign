@@ -4,15 +4,49 @@ void setup()
 }
 
 
+
+
+
 void draw()
 {
-	background_aquarium();
-	ellipse(50,50,50,50);
+	draw_background();
+	if (keyPressed == "p")
+	{
+		draw_planet();
+	}
+	
 }
 
 
-void background_aquarium()
+
+
+
+void draw_background()
 {
-	background(51,153,255);
+	background(0);
 }
 
+
+
+
+
+void draw_star()
+{
+
+}
+
+
+
+
+void draw_galaxy()
+{
+
+}
+
+
+
+
+void draw_planet()
+{
+
+}
