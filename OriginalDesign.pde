@@ -1,6 +1,6 @@
 void setup()
 {
-	size(1000,600, P3D);
+	size(1000,600);
 }
 
 
@@ -19,8 +19,10 @@ void draw()
 
 void draw_background()
 {
-	PImage background_image = loadImage("space.jpeg");
-	background(background_image);
+	background(51,153,255);
+	stroke(153,204,255);
+	strokeWeight(3);
+	ellipse(50, 50, 100, 100);
 }
 
 
@@ -45,11 +47,8 @@ void draw_galaxy()
 
 void draw_planet()
 {
-	translate(500,300,0);
 	int randR = (int)(Math.random()*201);
 	int randG = (int)(Math.random()*256);
 	int randB = (int)(Math.random()*256);
-	noStroke();
-	fill(randR, randG, randB);
-	sphere(30);
+
 }
