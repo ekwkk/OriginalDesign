@@ -1,12 +1,12 @@
 // Fish body variables
-int centerX = (int)((Math.random()*501)+50);
-int centerY = (int)((Math.random()*501)+50);
+int centerX = (int)((Math.random()*451)+50);
+int centerY = (int)((Math.random()*451)+50);
 int bodyX = 40;
 int bodyY = 30;
 // fish color
-int randR = (int)(Math.random()*100+100);
-int randG = (int)(Math.random()*100+100);
-int randB = (int)(Math.random()*100+100);
+int randR = (int)(Math.random()*256);
+int randG = (int)(Math.random()*256);
+int randB = (int)(Math.random()*256);
 int r = 0;
 int g = 150;
 
