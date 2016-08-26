@@ -22,9 +22,15 @@ void draw()
 	draw_background();
 	draw_fish();
 	centerX += 2;
-	if(centerX > 1000) 
+	if (centerX > 1000) 
 	{
         centerX = 0;
+    }
+    if (bodyX == 500)
+    {
+    	background(0);
+    	textSize(32);
+    	text("The fish exploded! Refresh page to tap again", 500, 250);
     }
 }
 
@@ -74,6 +80,6 @@ void draw_fish()
 
 void mousePressed()
 {
-	bodyX += 5;
-	bodyY += 5;
+	bodyX += 10;
+	bodyY += 10;
 }
