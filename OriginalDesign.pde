@@ -37,8 +37,8 @@ void draw_background()
 	if ((r < 180) && (g < 225))
     {
         background (r, g, 240);
-        r += 1;
-        g += 1;
+        r += 2;
+        g += 2;
     }
     else 
     {
