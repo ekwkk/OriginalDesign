@@ -1,6 +1,8 @@
 // Fish body variables
 int centerX = (int)((Math.random()*501)+50);
 int centerY = (int)((Math.random()*501)+50);
+int bodyX = 40;
+int bodyY = 30;
 int r = 0;
 int g = 150;
 
@@ -57,12 +59,21 @@ void draw_fish()
 	noStroke();
 	fill();
 	// Body
-	ellipse(centerX, centerY, 40, 30);
+	ellipse(centerX, centerY, bodyX, bodyY);  40, 30
 	// Tail
 	triangle(centerX-20, centerY, centerX-30, centerY-15, centerX-30, centerY+15);
 	// Eye
 	fill(33,33,33);
-	ellipse(centerX+10, centerY, 6, 6);
+	ellipse(centerX+10, centerY, bodyX/6, bodyY/5);
 
 }
 
+
+
+
+
+void mousePressed()
+{
+	bodyX += 5;
+	bodyY += 5;
+}
