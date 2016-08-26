@@ -3,6 +3,10 @@ int centerX = (int)((Math.random()*501)+50);
 int centerY = (int)((Math.random()*501)+50);
 int bodyX = 40;
 int bodyY = 30;
+// fish color
+int randR = (int)(Math.random()*256);
+int randG = (int)(Math.random()*256);
+int randB = (int)(Math.random()*256);
 int r = 0;
 int g = 150;
 
@@ -31,7 +35,7 @@ void draw()
     	background(0);
     	textSize(32);
     	fill(255,255,255);
-    	text("The fish is happy and full! Refresh page to feed another hungry fish.", 100, 250);
+    	text("The fish is happy and full! Refresh page to feed another hungry fish.", 30, 250);
     }
 }
 
@@ -64,7 +68,7 @@ void draw_background()
 void draw_fish()
 {
 	noStroke();
-	fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+	fill(randR, randG, randB);
 	// Body
 	ellipse(centerX, centerY, bodyX, bodyY);  40, 30
 	// Tail
