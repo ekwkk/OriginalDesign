@@ -1,6 +1,8 @@
 Original Design
 ===============
 
+My second APCS assignment.
+
 This assignment is similar to the previous Sample Assignment. You may find the PowerPoint sides 67 to 141 of the [apjava1.pptx](https://drive.google.com/open?id=0Bz2ZkT6qWPYTVkF4Q19aZ3dfdk0) presentation helpful. Start by logging into GitHub and forking [this](https://github.com/LowellSampleClass/OriginalDesign) repository.  
 
 Now, modify the Java code in the `OriginalDesign.pde` file to create your own design using the Processing graphics functions. Your program should use a variety of the [Processing graphics functions](https://processing.org/reference/). You will also

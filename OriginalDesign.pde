@@ -1,6 +1,13 @@
+// Randomly selects the amount of fish from [1,15]
+int numOfFish = (int)(Math.random()*16);
+// Fish body variables
+int centerX = (int)(Math.random()*501);
+int centerY = (int)(Math.random()*501);
+
+
 void setup()
 {
-	size(1000,600);
+	size(1000,500);
 }
 
 
@@ -10,15 +17,11 @@ void setup()
 void draw()
 {
 	draw_background();
-	// draw_bubble();
-	// if (mousePressed && (mouseButton == RIGHT))
-	// {
-	// 	draw_starfish();
-	// }
-	if (mouseButton == LEFT)
-	{
-		draw_fish();
-	}
+	draw_fish();
+	centerX += 2;
+	if(centerX > 1000) {
+        centerX = 0;
+    }
 }
 
 
@@ -27,8 +30,20 @@ void draw()
 
 void draw_background()
 {
-	// int rand = (int)(Math.random())
-	background(51,153,255);
+	// Color changing background
+	int r = 0;
+	int g = 150;
+	if ((r < 180) && (g < 225))
+    {
+        background (r, g, 240);
+        r += 0.2;
+        g += 0.2;
+    }
+    else 
+    {
+        r = 0;
+        g = 150;
+    }
 	
 }
 
@@ -36,61 +51,21 @@ void draw_background()
 
 
 
-void draw_bubble()
-{
-	// stroke(153,204,255);
-	// strokeWeight(3);
-	// ellipse(x, y, 100, 100);
-	// ellipse(x, y, 50, 50);
-	// ellipse(x, y, 75, 75);
-	// ellipse(x, y, 25, 25);
-	// ellipse(x, y, 50, 50);
-	// ellipse(x, y, 60, 60);
-}
-
-
-
-
 
 void draw_fish()
 {
-	bezier(183, 37, 348, 204, 349, -80, 183, 84);
+	for (i = 0, i < numOfFish, i++)
+	{
+		noStroke();
+		fill();
+		// Body
+		ellipse(centerX, centerY, 40, 30);
+		// Tail
+		triangle(centerX-20, centerY, centerX-30, centerY-15, centerX-30, centerY+15);
+		// Eye
+		fill(33,33,33);
+		ellipse(centerX+10, centerY, 6, 6);
+	}
+
 }
 
-
-
-
-void draw_starfish()
-{
-
-}
-
-
-
-
-// void setup() {
-//   size(1236, 800);
-//   smooth();
- 
-// }
-
-// void draw() {
-//   background(255);
- 
-//   noFill();
-//   stroke(0);
- 
-//   //curve that I want an object/sprite to move down
-//   bezier(800, 0,1000,10,900,450,700,682);
- 
- 
-//   float t =  (frameCount/100.0)%1;
-//   float x = bezierPoint(800, 1000, 900, 700, t);
-//   float y = bezierPoint( 0, 10, 450, 682, t);
- 
-//   fill(255,0,0);
-//   ellipse(x, y, 35, 35);
- 
- 
- 
-// }
