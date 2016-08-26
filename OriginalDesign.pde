@@ -26,7 +26,7 @@ void draw()
 	{
         centerX = 0;
     }
-    if (bodyX == 500)
+    if (bodyX >= 500)
     {
     	background(0);
     	textSize(32);
@@ -80,6 +80,6 @@ void draw_fish()
 
 void mousePressed()
 {
-	bodyX += 10;
-	bodyY += 10;
+	bodyX += 20;
+	bodyY += 20;
 }
