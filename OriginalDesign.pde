@@ -3,6 +3,9 @@
 // // Fish body variables
 // int centerX = (int)(Math.random()*501);
 // int centerY = (int)(Math.random()*501);
+int r = 0;
+int g = 150;
+
 
 
 void setup()
@@ -32,13 +35,11 @@ void draw()
 void draw_background()
 {
 	// Color changing background
-	int r = 0;
-	int g = 150;
 	if ((r < 180) && (g < 225))
     {
         background (r, g, 240);
-        r += 10;
-        g += 10;
+        r += 0.2;
+        g += 0.2;
     }
     else 
     {
@@ -55,7 +56,7 @@ void draw_background()
 
 // void draw_fish()
 // {
-// 	for (i = 0, i < numOfFish, i++)
+// 	for (int i = 0; i < numOfFish; i = i+1)
 // 	{
 // 		noStroke();
 // 		fill();
