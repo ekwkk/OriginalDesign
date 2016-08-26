@@ -1,5 +1,3 @@
-// Randomly selects the amount of fish from [1,15]
-int numOfFish = (int)(Math.random()*16);
 // Fish body variables
 int centerX = (int)((Math.random()*501)+50);
 int centerY = (int)((Math.random()*501)+50);
@@ -56,21 +54,15 @@ void draw_background()
 
 void draw_fish()
 {
-	for (int i = 0; i < numOfFish; i = i+1)
-	{
-		noStroke();
-		fill();
-		// Body
-		ellipse(centerX, centerY, 40, 30);
-		// Tail
-		triangle(centerX-20, centerY, centerX-30, centerY-15, centerX-30, centerY+15);
-		// Eye
-		fill(33,33,33);
-		ellipse(centerX+10, centerY, 6, 6);
-		// Random fish position for next fish
-		centerX -= (int)(Math.random()*11);
-		centerY -= (int)(Math.random()*11);
-	}
+	noStroke();
+	fill();
+	// Body
+	ellipse(centerX, centerY, 40, 30);
+	// Tail
+	triangle(centerX-20, centerY, centerX-30, centerY-15, centerX-30, centerY+15);
+	// Eye
+	fill(33,33,33);
+	ellipse(centerX+10, centerY, 6, 6);
 
 }
 
