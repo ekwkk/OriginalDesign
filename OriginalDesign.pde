@@ -31,7 +31,7 @@ void draw()
     	background(0);
     	textSize(32);
     	fill(255,255,255);
-    	text("The fish exploded! Refresh page to tap again", 100, 250);
+    	text("The fish is happy and full! Refresh page to feed another hungry fish.", 100, 250);
     }
 }
 
@@ -64,7 +64,7 @@ void draw_background()
 void draw_fish()
 {
 	noStroke();
-	fill();
+	fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
 	// Body
 	ellipse(centerX, centerY, bodyX, bodyY);  40, 30
 	// Tail
