@@ -31,7 +31,7 @@ void draw()
     	background(0);
     	textSize(32);
     	fill(255,255,255);
-    	text("The fish exploded! Refresh page to tap again", 30, 250);
+    	text("The fish exploded! Refresh page to tap again", 100, 250);
     }
 }
 
@@ -81,6 +81,6 @@ void draw_fish()
 
 void mousePressed()
 {
-	bodyX += 20;
-	bodyY += 20;
+	bodyX += 50;
+	bodyY += 50;
 }
