@@ -30,7 +30,8 @@ void draw()
     {
     	background(0);
     	textSize(32);
-    	text("The fish exploded! Refresh page to tap again", 500, 250);
+    	fill(255,255,255);
+    	text("The fish exploded! Refresh page to tap again", 30, 250);
     }
 }
 
